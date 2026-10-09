@@ -1,0 +1,52 @@
+/* style.css - tambahan CSS flexbox (dipisah dari <style> di HTML) */
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 36px;
+}
+
+nav a {
+    margin: 0;
+}
+
+/* Layout artikel + aside (layar lebar) */
+@media (min-width: 800px) {
+    .layout {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        align-items: flex-start;
+    }
+
+    article {
+        flex: 2.5;
+        min-width: 0;
+    }
+
+    aside {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+/* Daftar wisata */
+.wisata-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.wisata-item {
+    flex: 1 1 300px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.wisata-item .content-image {
+    height: 220px;
+}
